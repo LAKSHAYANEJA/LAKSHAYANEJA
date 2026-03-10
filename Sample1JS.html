@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: cadetblue;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                
+            }
+            .result{
+                background-color: brown;
+                font-size: large;
+                font-weight: bolder;
+                display: inline-flex;
+                padding: 3px;
+            }
+            .button1{
+                background-color: crimson;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+               color: darkblue;
+               display: inline-flex; 
+               font-weight:bold;
+               padding: 2px;
+            }
+            .button1:hover{
+                background-color:darkslategray;
+                color: beige;
+            }
+        </style>
+        <title>JavaScript Testing</title>
+    </head>
+    <body> <center>
+        <p>Hello Mates, this is my JavaScript Program written in HTML</p><br><br>
+        <p>CALCULATOR</p><br><br>
+
+
+        Enter the first number 
+        <input type="number" id="Num1">
+        <br>
+        Enter the second Number 
+        <input type="number" id="Num2">
+        <br>
+        Select your operator
+        <select name="operator-selection" id="operator">
+            <option value="Add">Add</option>
+            <option value="Difference">Difference</option>
+            <option value="Multiply">Multiply</option>
+            <option value="Divide">Divide</option>
+        </select><br><br>
+        <input type="button" value="Perform !" onclick="Add2JS()" class="button1"><br>
+        <p id="result" class="result"></p>
+        <script type="text/javascript">
+            function Add2JS(){
+            var n1 = parseFloat(document.getElementById("Num1").value);
+            var n2 = parseFloat(document.getElementById("Num2").value); 
+            var op = document.getElementById("operator").value;
+            switch(op){
+                case 'Add' :
+                    var n3 = n1 + n2;
+                    document.getElementById("result").innerHTML= "Your Result is : "+n3 ;
+
+                    break;
+                    case 'Difference' :
+                        var n3 = n1 - n2;
+                        document.getElementById("result").innerHTML= "Your Result is : "+n3 ;
+                        break;
+                        case 'Multiply':
+                            var n3 = n1 * n2;
+                            document.getElementById("result").innerHTML= "Your Result is : "+n3 ;
+                            break;
+                            case 'Divide':
+                                var n3 = n1 / n2 ;
+                                document.getElementById("result").innerHTML= "Your Result is : "+n3 ;
+                                break;
+                default:
+                    document.getElementById("result").innerHTML= ";-(  Please enter a valid input... " ;
+
+            };
+            }
+        </script>
+        </center>
+    </body>
+</html>
