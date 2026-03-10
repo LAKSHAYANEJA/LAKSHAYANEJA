@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+    <p class="welcome-msg">Welcome Educator, You can add the subjects here!</p>
+
+    <div class="add_subjects_formbox">
+        <div class="form_message_box">
+        {% for message in messages %}
+
+        {{message}}
+
+        {% endfor %}</div>
+<!-- 
+            {% for r in ordered_records %}
+                <br />{{r.student_full_name}} 
+            {% endfor %} -->
+
+
+    <form action="" name="add_subjects" method="post">
+        {% csrf_token %}
+        <table>
+            <tr >
+                <td>Stream and Class</td>
+                <td style="padding-bottom: 15px;"><select name="class_name" required class="option_style">
+                    <option value="0">Select a Stream</option>
+                    <option value="humanities">Arts/Humanities </option>
+                    <option value="commerce">Commerce</option>
+                    <option value="medical">Medical </option>
+                    <option value="non-medical">Non-Medical </option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Select a Class</td>
+                <td>
+                    <input type="radio" name="class_number" value="11" required class="radio_input_button" /> 11<sup>th</sup>
+                    <input type="radio" name="class_number" value="12" required class="radio_input_button" /> 12<sup>th</sup>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" name="submit" class="form_submit_button"></td>
+            </tr>
+            </table>
+    </form>
+    </div>
+    
+</div>
+
+                <script src="" async defer></script>
+{% endblock content %}

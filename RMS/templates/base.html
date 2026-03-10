@@ -1,0 +1,121 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %} 
+
+            {% endblock title %}
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/res-navbar.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap-icons-1.9.0.css' %}" />
+        <script src="{% static 'javascript/JQuery/jquery-3.4.1.min.js' %}"></script>
+    </head>
+    <body>
+
+        <main>
+            <header>
+                <h1>Result Management System</h1>
+        <a href="/home/" class="return-home">HOME</a>
+                
+        <a href="/logoutuser/" class="log-out-box">Logout</a>
+
+        
+
+            </header>
+            <div class="row"><br /><br />
+            <div class="sidebar-left">
+            <!-- <div id="flip"><button class="subjects_options" id="flip">Add Subject <i class="bi bi-chevron-down"></i></button>
+            </div>
+            <ul id="panel">
+                <li><a href="/add_subjects/">Add Subjects</a></li>
+                <li><a href="/view_subjects_list/">View/Make Changes in Subjects List</a></li>
+                </ul>
+                  -->
+                 <details class="sidebar-left-options">
+                    <summary>Add Subjects</summary>
+                    <ul id="panel">
+                <li><a href="/add_subjects/">Add Subjects</a></li>
+                <li><a href="/view_subjects_list/">View/Make Changes in Subjects List</a></li>
+                </ul>
+
+                 </details>     
+                 
+                 <details class="sidebar-left-options">
+                    <summary>Assign Subjects</summary>
+                    <ul id="panel">
+                <li><a href="/assign_subjects/">Assign Subjects</a></li>
+                <li><a href="/view_assigned_subjects_list/">View/Make Changes in Assigned Subjects List</a></li>
+                </ul>
+
+                 </details>          
+                 
+                 <details class="sidebar-left-options">
+                    <summary>Add Students</summary>
+                    <ul id="panel">
+                <li><a href="/add_students/">Add Students</a></li>
+                <li><a href="/assign_roll_number_to_students/">Assign Roll Numbers to Students</a></li>
+                <li><a href="/view_students_list/">View/Make Changes in Students List</a></li>
+                </ul>
+
+                 </details>          
+
+                 <details class="sidebar-left-options">
+                    <summary>Add Results</summary>
+                    <ul id="panel">
+                <li><a href="/assign_subjects/">Add Results</a></li>
+                <li><a href="/view_assigned_subjects_list/">View/Make Changes in Result List</a></li>
+                </ul>
+
+                 </details>          
+
+
+
+                <!-- <li><a href="/assign_subjects/">Assign Subjects to a class</a>
+                 &nbsp;&nbsp;&nbsp;&nbsp;<button class="subjects_options" id="flip1"><i class="bi bi-chevron-down"></i></button>
+                <div id="panel1">
+                    <ul>
+                        <li><a href="/view_assigned_subjects_list/">View/Make Changes in Assigned Subjects List</a></li>
+                    </ul>
+                </div>
+                </li>  <br />
+                <li><a href="#">Add a Student</a></li> <br />
+                <li><a href="#">Add Result</a></li> <br />
+            </ul> -->
+            </div>
+            <div class="sidebar-right">
+            {% block content %}
+
+            {% endblock content %}
+            </div>
+            </div>
+    </main>
+
+
+
+       
+        <script>
+            $(document).ready(function()
+        {
+            var page_height = $(document).height();
+            //alert(page_height);
+            $('.sidebar-left').css({'height':+(page_height-240)});
+           
+      
+
+            $(document).ready(function(){
+                $("#flip").click(function(){
+                $("#panel").slideToggle("fast");
+                });
+                $("#flip1").click(function(){
+                    $("#panel1").slideToggle('fast')
+                });
+            });
+        });
+        </script>
+    </body>
+</html>

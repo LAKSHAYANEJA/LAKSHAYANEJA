@@ -1,0 +1,374 @@
+@font-face {
+  font-family: "bootstrap-icons";
+  src: url("bootstrap-icons-1.9.1/fonts/bootstrap-icons.woff2?48804dbfe98a9c8a08858a0de0b0e3db") format("woff2"),
+url("bootstrap-icons-1.9.1/fonts/bootstrap-icons.woff?48804dbfe98a9c8a08858a0de0b0e3db") format("woff");
+}
+
+*{box-sizing: border-box;}
+
+body{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; 
+}
+main{}
+header{}
+header h1{
+    color:cornflowerblue;
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 30px;
+}
+
+.return-home{
+    /* float: left; */
+    text-decoration: none;
+    border: 1px solid cadetblue;
+    background-color: cadetblue;
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 10px;
+    font-size:medium;
+    transition: 1s;
+}
+.return-home:hover{
+    color: cadetblue;
+    background-color: aliceblue;
+}
+
+.sidebar-left{width:25%; background-color: gray; float: left; font-size: large; padding: 20px;}
+.sidebar-left details{
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    margin-bottom: 10px; 
+    padding: 10px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+.sidebar-left details ul{
+    list-style: none;
+    border:1px solid #F00; 
+    margin:0; 
+    padding: 0; 
+    list-style: none; 
+    background-color: dodgerblue;
+}
+.sidebar-left details ul li{
+    color: aliceblue;
+    padding: 10px;
+    text-decoration: none;
+}
+.sidebar-left details ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    /* background-color: dodgerblue; */ 
+    transition: 1.5s;
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+.sidebar-left details ul li a:hover{
+    color: cornflowerblue;
+    background-color:darkslategray;
+
+}
+.sidebar-left details ul li a.active{
+    background-color:lightslategray;
+    color: aliceblue;
+}
+
+
+.sidebar-left details::after{content: ''; display: block; clear: both;}
+.sidebar-right{width:75%; background-color:#fff; float: right;}
+
+.row{}
+.row::after{content: ''; display: block; clear: both;}
+.log-out-box{
+    float: right;
+    text-decoration: none;
+    border: 1px solid cadetblue;
+    background-color: cadetblue;
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 10px;
+    font-size:medium;
+    transition: 1s;
+}
+.log-out-box:hover{
+    background-color: aliceblue;
+    color: cadetblue;
+}
+
+.welcome-msg{
+    color: brown;
+    font-style: italic;
+}
+
+.container{
+    width: 95%;
+    margin:0 auto;
+    padding: 30px;
+    border: 1px solid cadetblue;
+    border-radius: 5px ;
+    
+}
+
+.login-form{
+    align-items: center;
+    box-shadow: 0 0 20px #a8a0a0;
+    width: 25%;
+    background-color: cadetblue;
+    color: aliceblue;
+    display: inline-block;
+    padding: 100px;
+    position: relative ;
+    left: 475px;
+    top: 150px;
+}
+.login-form table{
+    margin-top: -40px;
+}
+.login-form input{
+    padding: 10px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    float: none;
+    display: block;
+    align-items: flex-start;
+    border-radius: 5px;
+    outline: 1px solid black;
+}
+
+.submit-button{
+    float: none !important;
+    text-align : center !important;
+    margin: 0 auto;
+    display: block;
+    font-weight: bold;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+.submit-button:hover{
+    background-color: black;
+    color: aquamarine;
+}
+
+.login-heading{
+    position: absolute;
+    /* text-align: center; */
+    left: 650px;
+    top: 60px;
+    border: 1px solid cadetblue;
+    background-color: aliceblue;
+    border-radius: 10px;
+    border-style: dashed;
+    box-shadow: 0 0 15px #d3cece;
+    font-size: x-large;
+    padding: 20px;
+}
+
+.login-page{
+    background-color: rgb(4, 7, 45);
+}
+
+.add_subjects_formbox{
+    
+    width: 100%;
+
+    background-color: darkslategray;
+    border: 2px dashed cadetblue;
+    border-radius: 10px;
+    color: aliceblue;
+    padding: 25px;
+}
+
+.add_subjects_formbox input{
+    padding: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.form_submit_button{
+
+    padding: 10px;
+    background-color: darkslateblue;
+    color: aliceblue;
+    display: inline;
+    text-align: center;
+    width: 75% !important;
+    transition: 1.75s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.form_submit_button:hover{
+    background-color: cadetblue;
+    color: rgb(46, 38, 101);
+}
+
+.form_message_box{
+    background-color: bisque; 
+    color: rgb(11, 3, 123); 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:large; 
+    display: inline-block;
+    /* transition-duration: 5s; */
+    /* padding: 10px; */
+}
+
+.subjects_options{
+    background: none;
+    border: 0px;
+    height: 40px;
+    width: 30px;
+    color: rgb(55, 51, 51);
+    /* font-weight:bolder !important; */
+}
+
+#flip{color:#FFF; font-size: 18px;}
+#panel, #flip {
+    padding: 5px;
+    text-align: left;
+    background-color: dodgerblue;
+    border: solid 1px #c3c3c3;
+	width:100%;
+	float:left;
+    
+}
+
+
+
+
+#flip1 {
+    /* display: inline-block; */
+    float: right;
+  /* font-display: block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f282"; */
+   
+}    
+
+
+#panel1 {
+    /* padding: 50px; */
+    display: block;
+    /* padding: 5px; */
+    /* text-align: center; */
+    background-color: dodgerblue;
+    /* border: solid 1px #c3c3c3; */
+	width:100%;
+	float:none;
+    min-height: 1px;
+    font-size: small;
+}
+
+#panel1 ul li{
+    margin-left: -25px;
+    padding: -20px;
+    display: inline-flex;
+    width: 100%;
+    border: 1px dashed aliceblue;
+    border-radius: 5px;
+}
+
+.view_subjects_list{}
+
+.view_subjects_list table{
+    border: 1px solid;
+    background-color: bisque;
+    text-align: center;
+}
+.view_subjects_list table tr td{
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+}
+
+.view_subjects_list table tr td a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+#delete_button{
+    background-color: bisque;
+    text-align: center;
+    text-decoration: none;
+}
+
+#update_button{
+    background-color: bisque;
+    text-align: center;
+}
+#update_button button{
+    background-color: black;
+    color: antiquewhite;
+    padding: 5px;
+}
+
+#update_button a{
+    text-decoration: none;
+    color: cornflowerblue;
+    transition: 0.5s;
+}
+
+#update_button a:hover{
+    color: firebrick;
+}
+
+.option_style{font-family :"Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-weight: bold; outline: 1px solid black; padding: 5px; font-size: large; background-color:dimgray; color: aliceblue; border-radius: 5px;}
+.option_style option{
+    font-family :"Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-weight: bold;
+    padding: 5px;
+    background-color: aliceblue;
+    color: darkslategray;
+}
+/* .option_style:hover{
+    background-color: cornflowerblue;
+    color: antiquewhite;
+} */
+
+.radio_input_button{
+    /* padding: 10px;
+    font-size: large; */
+    height:1.5em;
+    width: 1.5em;
+}
+
+.add_students_formbox{
+    width: 100%;
+    background-color:dimgrey;
+    border: 2px dashed cadetblue;
+    border-radius: 10px;
+    color: aliceblue;
+    padding: 25px;
+}
+.add_students_formbox table{}
+
+.add_students_formbox table tr td{
+        font-size: medium;
+
+    /* padding:10px 10px; */
+}
+
+
+
+.add_students_formbox form input{
+     font-size: small;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+.attention-note{
+    color: crimson;
+    font-size: small;
+    background-color: aliceblue;
+}

@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body class="login-page">
+ 
+{{error}}
+        <p class="login-heading">Educator Login</p>
+        <div class="login-form">  
+            <div class="form_message_box">
+                {% for message in messages %}
+                {{message}}
+                {% endfor %}
+            </div><br /> <br />
+
+        <form name="frmlogin" method="post" action="/">
+        {% csrf_token %}
+        <table>
+            <tr><td style="padding: 15px;">Username</td><td style="padding: 15px;"><input type="text" name="username" value="" placeholder="Enter username" /></td></tr><!--<br /><br />-->
+            <tr><td style="padding: 15px;">Password</td><td style="padding: 15px;"><input type="password" name="password" value="" placeholder="Enter password" /></td></tr><!--<br /><br />--><br />
+            <tr><td></td><td><input type="submit" name="submit" value="Submit" class="submit-button" /></td></tr><br />
+        </table>
+        </form>
+        </div>
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>

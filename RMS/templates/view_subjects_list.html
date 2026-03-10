@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+    <p class="welcome-msg">Welcome Educator, You can view the subjects here!</p>
+
+    <div class="view_subject_list">
+        <div class="form_message_box">
+        {% for message in messages %}
+
+        {{message}}
+
+        {% endfor %}
+    </div>
+        <table border="1" width="95%" align="center" style="font-size: medium;">
+            <tr>
+                <th>S. No.</th>
+                <th>Subject Name</th>
+                <th>Subject Code</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+            {% for r in record_of_subjects|dictsort:"subject_code" %}
+            <tr>
+                <td align="center">{{forloop.counter}}</td>
+                <td align="center">{{r.subject_name}}</td>
+                <td align="center">{{r.subject_code}}</td>
+                <td id="delete_button"><button onclick="delete_record({{r.id}})">Delete</button></td>
+                <td id="update_button"><a href='/update/{{r.id}}'>Update</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+</div>
+
+                <script>
+                    function delete_record(id)
+    {
+        // prompt("Do you want to delete ?")
+        if(confirm("do u want to delete"==true)) {
+            window.open('/delete/'+id);
+        }
+    }
+
+    function update_record(id){
+        if(confirm("Do you want to update?" == true)){
+            window.open('/update/'+id)
+        }
+    }
+                </script>
+{% endblock content %}

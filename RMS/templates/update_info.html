@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+    <p class="welcome-msg">Welcome Educator, You can add the subjects here!</p>
+
+    <div class="add_subjects_formbox">
+        <div class="form_message_box">
+        {% for message in messages %}
+
+        {{message}}
+
+        {% endfor %}</div>
+    <form action="" name="add_subjects" method="post">
+        {% csrf_token %}
+        <table>
+            <tr >
+                <td>Subject Name</td>
+                <td style="padding-bottom: 15px;"><input type="text" name="subject_name" value="{{result.subject_name}}" /></td>
+            </tr>
+            <tr>
+                <td>Subject Code</td>
+                <td style="padding-bottom: 15px;"><input type="text" name="subject_code" required value="{{result.subject_code}}" /></td>
+            </tr>
+            <tr><td></td><td><input type="submit" name="submit" value="Add Subjects" class="form_submit_button" /></td></tr>
+        </table>
+    </form>
+    </div>
+    
+</div>
+
+                <script src="" async defer></script>
+{% endblock content %}
